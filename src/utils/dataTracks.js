@@ -29,7 +29,6 @@ const arrTracks = [
     genre: "Поп-музыка",
     year: 2008,
   },
-  },
   {
     id: 3,
     trackName: "Non Stop",
