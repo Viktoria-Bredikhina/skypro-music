@@ -1,34 +1,23 @@
-import "./TrackList.css";
+import * as S from "./TrackList.style";
 import { Tracks } from "../TrackListItem/Tracks";
 import { TrackListTitle } from "../TracklistTitle/TrackListTitle";
+import { TrackListFilter } from "../TrackListFilter/TrackListFilter";
 
-export function TrackList() {
+export function TrackList({ isLoading }) {
   return (
-    <div className="main__centerblock centerblock">
-      <div className="centerblock__search search">
-        <svg className="search__svg">
+    <S.mainCenterblock>
+      <S.centerblockSearch>
+        <S.searchSvg>
           <use xlinkHref="img/icon/sprite.svg#icon-search" />
-        </svg>
-        <input
-          className="search__text"
-          type="search"
-          placeholder="Поиск"
-          name="search"
-        />
-      </div>
-      <h2 className="centerblock__h2">Треки</h2>
-      <div className="centerblock__filter filter">
-        <div className="filter__title">Искать по:</div>
-        <div className="filter__button button-author _btn-text">
-          исполнителю
-        </div>
-        <div className="filter__button button-year _btn-text">году выпуска</div>
-        <div className="filter__button button-genre _btn-text">жанру</div>
-      </div>
-      <div className="centerblock__content">
+        </S.searchSvg>
+        <S.searchText type="search" placeholder="Поиск" name="search" />
+      </S.centerblockSearch>
+      <S.centerblockH2 className="centerblock__h2">Треки</S.centerblockH2>
+      <TrackListFilter />
+      <S.centerblockContent>
         <TrackListTitle />
-        <Tracks />
-      </div>
-    </div>
+        <Tracks isLoading={isLoading} />
+      </S.centerblockContent>
+    </S.mainCenterblock>
   );
 }
