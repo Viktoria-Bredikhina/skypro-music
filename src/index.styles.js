@@ -1,6 +1,7 @@
 import  { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
+
 @font-face {
   font-family: "StratosSkyeng";
   src:
@@ -19,10 +20,13 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
 * {
   margin: 0;
   padding: 0;
