@@ -1,4 +1,4 @@
-import { styled } from "styled-components";
+import  styled  from "styled-components";
 
 export const mainSidebar = styled.div`
   max-width: 418px;

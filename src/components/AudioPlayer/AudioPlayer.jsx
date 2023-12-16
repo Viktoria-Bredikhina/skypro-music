@@ -1,6 +1,6 @@
 import * as S from "./AudioPlayer.styles";
 import { SkeletonPlayBar } from "../TrackListItem/Tracks.style";
-import { AudioPlayerIcons } from "../AdioPlayerIcons/AudioPlayerIcons";
+import { AudioPlayerIcons } from '../AudioPlayerIcons/AudioPlayerIcons';
 
 export function AudioPlayer({ isLoading }) {
   return (
