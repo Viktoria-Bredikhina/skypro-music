@@ -20,7 +20,7 @@ export function NavMenu() {
           <S.menuList>
             <NavMenuItems item={{ link: "/", text: "Главное" }} />
             <NavMenuItems item={{ link: "/favorites", text: "Мой плейлист" }} />
-            <NavMenuItems item={{ link: "/signIn", text: "Выйти" }} />
+            <NavMenuItems item={{ link: "../signin.html", text: "Войти" }} />
           </S.menuList>
         </S.navMenu>
       )}
