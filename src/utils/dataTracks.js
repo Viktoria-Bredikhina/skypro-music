@@ -49,7 +49,7 @@ const arrTracks = [
     isliked: false,
     trackTime: "2:54",
     genre: 'Хип-хоп',
-    year: 2010,   
+    year: 2010,    
   },
   {
     id: 5,
@@ -85,11 +85,13 @@ const arrTracks = [
   },
   {
     id: 8,
-    trackName: "Family",
-    trackAuthor: "Palace",
-    album: "So Long Forever",
+    trackName: "Halfway to Hell",
+    trackAuthor: "Jelly Roll",
+    album: "Whitsitt Chapel",
     isliked: false,
-    trackTime: "3;05",
+    trackTime: "2:58",
+    genre: 'Кантри',
+    year: 2023,
   },
 ];
 export default arrTracks;
