@@ -8,10 +8,6 @@ export const bar = styled.div`
   background: rgba(28, 28, 28, 0.9);
 `;
 
-export const Audio = styled.div`
-  display: none;
-`;
-
 export const barContent = styled.div`
   display: -webkit-box;
   display: -ms-flexbox;
@@ -20,12 +16,6 @@ export const barContent = styled.div`
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-`;
-
-export const barPlayerProgress = styled.div`
-  width: 100%;
-  height: 5px;
-  background: #2e2e2e;
 `;
 
 export const barPlayerBlock = styled.div`
