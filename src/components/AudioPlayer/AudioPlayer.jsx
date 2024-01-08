@@ -1,34 +1,59 @@
+/* eslint-disable jsx-a11y/media-has-caption */
+import { useRef, useState, useEffect } from "react";
 import * as S from "./AudioPlayer.styles";
 import { SkeletonPlayBar } from "../TrackListItem/Tracks.style";
 import { AudioPlayerIcons } from "../AdioPlayerIcons/AudioPlayerIcons";
 
 export function AudioPlayer({ isLoading, currentTrack }) {
+  const [isPlaying, setIsPlaying] = useState(false);
+  const audioRef = useRef(null);
+  console.log(audioRef);
+
+  const handleStart = () => {
+    audioRef.current.play()
+    setIsPlaying(true)
+  }
+  const handleStop = () => {
+    audioRef.current.pause()
+    setIsPlaying(false)
+  }
+  const togglePlay = isPlaying ? handleStop : handleStart
+
+  useEffect(() => {
+      handleStart()
+  }, [currentTrack])
+
+
   return (
     <S.bar>
+      <audio src={currentTrack.track_file} ref={audioRef}/>
       <S.barContent>
         <S.barPlayerProgress />
         <S.barPlayerBlock>
           <S.barPlayer>
             <S.playerControls>
               <AudioPlayerIcons
-                onclick={() => {
-                  alert("Еще не реализовано");
-                }}
                 alt="prev"
-              />
-              <AudioPlayerIcons alt="play" />
-              <AudioPlayerIcons
-                onclick={() => {
+                click={() => {
                   alert("Еще не реализовано");
                 }}
+              />
+              <AudioPlayerIcons
+                alt={isPlaying ? "pause" : "play"}
+                click={togglePlay}
+              />
+              <AudioPlayerIcons
                 alt="next"
+                click={() => {
+                  alert("Еще не реализовано");
+                }}
               />
               <AudioPlayerIcons alt="repeat" />
               <AudioPlayerIcons
-                onclick={() => {
+                alt="shuffle"
+                click={() => {
                   alert("Еще не реализовано");
                 }}
-                alt="shuffle"
               />
             </S.playerControls>
             <S.playerTrackPlay>
